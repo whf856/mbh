@@ -1,0 +1,626 @@
+<html lang="zh-CN"><head> 
+<meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"> 
+  <title>梅赛德斯-奔驰</title> 
+  <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+  <!-- 初始化加载弹窗 --> 
+  <div class="loading-modal" id="loading-modal" style="display: none;"> 
+      <div class="loading-content"> 
+          <div class="loading-spinner"></div> 
+          <div class="loading-text">软件正在初始化中...</div> 
+      </div> 
+  </div> 
+ 
+  <!-- 主页面内容 --> 
+  <div id="main-page"> 
+      <!-- 右上角图标 --> 
+      <div class="header-icons"> 
+          <img src="https://i.imgs.ovh/2025/09/09/70irvH.jpeg" class="header-icon" alt="图标1" id="edit-icon"> 
+          <img src="https://i.imgs.ovh/2025/09/09/70iLZQ.jpeg" class="header-icon" alt="图标2" id="user-edit-icon"> 
+      </div> 
+ 
+      <!-- 用户卡片 --> 
+      <div class="user-card"> 
+          <div class="avatar-wrapper"> 
+              <div class="avatar-badge"> 
+                  <img src="https://i.imgs.ovh/2025/09/09/70iAnp.png" alt="徽标"> 
+              </div> 
+              <img src="https://i.imgs.ovh/2025/09/09/70iU4m.jpeg" alt="用户头像" class="avatar" id="user-avatar"> 
+          </div> 
+ 
+          <div class="user-info"> 
+              <div class="username"> 
+                  <span id="username-text">zwe</span> 
+                  <img src="https://i.imgs.ovh/2025/09/09/70ikFO.png" class="username-arrow" alt="箭头"> 
+              </div> 
+              <div class="username-small" id="user-signature">你的个性签名</div> 
+ 
+              <div class="stats-container"> 
+                  <div class="stat-item"> 
+                      <div class="stat-number" id="moment-count">0</div> 
+                      <div class="stat-label">此刻</div> 
+                  </div> 
+                  <div class="stat-item"> 
+                      <div class="stat-number" id="follow-count">0</div> 
+                      <div class="stat-label">关注</div> 
+                  </div> 
+                  <div class="stat-item"> 
+                      <div class="stat-number" id="fans-count">0</div> 
+                      <div class="stat-label">粉丝</div> 
+                  </div> 
+              </div> 
+          </div> 
+      </div> 
+ 
+      <!-- 车辆图片 --> 
+      <img src="https://i.imgs.ovh/2025/09/09/70iq9d.png" class="vehicle-image" alt="未创建车辆"> 
+ 
+      <!-- 功能列表 --> 
+      <div class="function-list"> 
+          <div class="function-item"> 
+              <img src="https://i.imgs.ovh/2025/09/09/70ieqY.jpeg" class="function-icon" alt="订单中心"> 
+              <span class="function-name">订单中心</span> 
+              <img src="https://i.imgs.ovh/2025/09/09/70iMbn.jpeg" class="arrow-icon" alt="箭头"> 
+          </div> 
+          <div class="function-item"> 
+              <img src="https://i.imgs.ovh/2025/09/09/70iP2L.jpeg" class="function-icon" alt="权益中心"> 
+              <span class="function-name">权益中心</span> 
+              <img src="https://i.imgs.ovh/2025/09/09/70iMbn.jpeg" class="arrow-icon" alt="箭头"> 
+          </div> 
+          <div class="function-item"> 
+              <img src="https://i.imgs.ovh/2025/09/09/70isEb.jpeg" class="function-icon" alt="我的保修手册"> 
+              <span class="function-name">我的保修手册</span> 
+              <img src="https://i.imgs.ovh/2025/09/09/70iMbn.jpeg" class="arrow-icon" alt="箭头"> 
+          </div> 
+          <div class="function-item"> 
+              <img src="https://i.imgs.ovh/2025/09/09/70iBdF.jpeg" class="function-icon" alt="地址管理"> 
+              <span class="function-name">地址管理</span> 
+              <img src="https://i.imgs.ovh/2025/09/09/70iMbn.jpeg" class="arrow-icon" alt="箭头"> 
+          </div> 
+      </div> 
+ 
+      <div class="function-list"> 
+          <div class="function-item"> 
+              <img src="https://i.imgs.ovh/2025/09/09/70i1z9.jpeg" class="function-icon" alt="用车指南"> 
+              <span class="function-name">用车指南</span> 
+              <img src="https://i.imgs.ovh/2025/09/09/70iMbn.jpeg" class="arrow-icon" alt="箭头"> 
+          </div> 
+      </div> 
+ 
+      <div class="function-list"> 
+          <div class="function-item"> 
+              <img src="https://i.imgs.ovh/2025/09/09/7700S6.jpeg" class="function-icon" alt="授权管理"> 
+              <span class="function-name">授权管理</span> 
+              <img src="https://i.imgs.ovh/2025/09/09/70iMbn.jpeg" class="arrow-icon" alt="箭头"> 
+          </div> 
+          <div class="function-item"> 
+              <img src="https://i.imgs.ovh/2025/09/09/770adY.jpeg" class="function-icon" alt="法律信息"> 
+              <span class="function-name">法律信息</span> 
+              <img src="https://i.imgs.ovh/2025/09/09/70iMbn.jpeg" class="arrow-icon" alt="箭头"> 
+          </div> 
+          <div class="function-item"> 
+              <img src="https://i.imgs.ovh/2025/09/09/770vwL.jpeg" class="function-icon" alt="产品优化建议"> 
+              <span class="function-name">产品优化建议</span> 
+              <img src="https://i.imgs.ovh/2025/09/09/70iMbn.jpeg" class="arrow-icon" alt="箭头"> 
+          </div> 
+      </div> 
+  </div> 
+ 
+  <!-- 车辆页面 --> 
+  <div class="vehicle-page" id="vehicle-page"> 
+      <div class="background"></div> 
+ 
+      <div class="info-container"> 
+          <div class="info-row"> 
+              <div class="info-item" id="fuel-item"> 
+                  <div class="custom-icon" style="background-image: url('/https://i.imgs.ovh/2025/09/09/77021c.png')"></div> 
+                  <span class="info-value" id="fuel-value">30%</span> 
+              </div> 
+              <div class="info-item" id="mileage-item"> 
+                  <div class="custom-icon" style="background-image: url('/https://i.imgs.ovh/2025/09/09/770JLp.png')"></div> 
+                  <span class="info-value" id="mileage-value">98公里</span> 
+              </div> 
+          </div> 
+          <div class="time-info"> 
+              <div class="time-icon"></div> 
+              <span id="current-time">同步于: 2025/08/24 19:12</span> 
+          </div> 
+      </div> 
+ 
+      <div class="carousel-container"> 
+          <div class="carousel"> 
+              <div class="carousel-item"> 
+                  <img src="https://i.imgs.ovh/2025/09/09/770R7t.png" class="carousel-img" alt="车辆图片1"> 
+              </div> 
+              <div class="carousel-item"> 
+                  <img src="https://i.imgs.ovh/2025/09/09/770gAq.png" class="carousel-img" alt="车辆图片2"> 
+              </div> 
+              <div class="carousel-item"> 
+                  <img src="https://i.imgs.ovh/2025/09/09/770kJC.png" class="carousel-img" alt="车辆图片3"> 
+              </div> 
+          </div> 
+      </div> 
+ 
+      <div class="carousel-dots"> 
+          <div class="dot active" data-index="0"></div> 
+          <div class="dot" data-index="1"></div> 
+          <div class="dot" data-index="2"></div> 
+      </div> 
+  </div> 
+ 
+  <!-- 编辑弹窗样式 --> 
+  <div class="edit-modal" id="edit-modal"> 
+      <div class="edit-content"> 
+          <div class="edit-title">编辑车辆信息</div> 
+          <div class="edit-field"> 
+              <label for="battery-input">油量:</label> 
+              <input type="text" id="battery-input" placeholder="输入油量百分比"> 
+          </div> 
+          <div class="edit-field"> 
+              <label for="mileage-input">公里:</label> 
+              <input type="text" id="mileage-input" placeholder="输入公里数"> 
+          </div> 
+          <div class="edit-buttons"> 
+              <button class="cancel-btn" id="cancel-edit">取消</button> 
+              <button class="save-btn" id="save-edit">保存</button> 
+          </div> 
+      </div> 
+  </div> 
+ 
+  <!-- 用户信息编辑弹窗 --> 
+  <div class="user-edit-modal" id="user-edit-modal"> 
+      <div class="user-edit-content"> 
+          <div class="edit-title">编辑个人信息</div> 
+          <div class="avatar-upload"> 
+              <img src="https://i.imgs.ovh/2025/09/09/70iU4m.jpeg" alt="头像预览" class="avatar-preview" id="avatar-preview"> 
+              <div class="avatar-upload-text">点击更换头像</div> 
+              <input type="file" id="avatar-upload-input" accept="image/*" style="display: none;"> 
+          </div> 
+          <div class="edit-field"> 
+              <label for="username-input">名称:</label> 
+              <input type="text" id="username-input" placeholder="输入用户名"> 
+          </div> 
+          <div class="edit-field"> 
+              <label for="signature-input">个性签名:</label> 
+              <input type="text" id="signature-input" placeholder="输入个性签名"> 
+          </div> 
+          <div class="edit-field"> 
+              <label for="moment-input">此刻:</label> 
+              <input type="text" id="moment-input" placeholder="输入此刻数量"> 
+          </div> 
+          <div class="edit-field"> 
+              <label for="follow-input">关注:</label> 
+              <input type="text" id="follow-input" placeholder="输入关注数量"> 
+          </div> 
+          <div class="edit-field"> 
+              <label for="fans-input">粉丝:</label> 
+              <input type="text" id="fans-input" placeholder="输入粉丝数量"> 
+          </div> 
+          <div class="edit-buttons"> 
+              <button class="cancel-btn" id="cancel-user-edit">取消</button> 
+              <button class="save-btn" id="save-user-edit">保存</button> 
+          </div> 
+      </div> 
+  </div> 
+ 
+  <!-- 底部导航栏 --> 
+  <div class="bottom-navigation" id="bottom-nav"> 
+      <a href="javascript:void(0)" class="nav-link" onclick="handleNavClick('discover')"> 
+          <img src="https://i.imgs.ovh/2025/09/09/7706LA.jpeg" alt="发现" class="nav-icon"> 
+          <span class="nav-label">发现</span> 
+      </a> 
+      <a href="javascript:void(0)" class="nav-link" onclick="handleNavClick('service')"> 
+          <img src="https://i.imgs.ovh/2025/09/09/7708MN.jpeg" alt="服务" class="nav-icon"> 
+          <span class="nav-label">服务</span> 
+      </a> 
+      <a href="javascript:void(0)" class="nav-link" id="vehicle-link" onclick="toggleVehiclePage()"> 
+          <img src="https://i.imgs.ovh/2025/09/09/7709cU.jpeg" alt="车辆" class="nav-icon" id="vehicle-icon"> 
+          <span class="nav-label">车辆</span> 
+      </a> 
+      <a href="javascript:void(0)" class="nav-link" onclick="handleNavClick('shop')"> 
+          <img src="https://i.imgs.ovh/2025/09/09/770D6X.jpeg" alt="商店" class="nav-icon"> 
+          <span class="nav-label">商店</span> 
+      </a> 
+      <a href="javascript:void(0)" class="nav-link" id="mine-link" onclick="showMainPage()"> 
+          <img src="https://i.imgs.ovh/2025/09/09/770MlQ.jpeg" alt="我的" class="nav-icon" id="mine-icon"> 
+          <span class="nav-label">我的</span> 
+      </a> 
+  </div> 
+ 
+  <script> 
+      // 允许页面缩放和滑动 
+      document.addEventListener('touchmove', function(e) { 
+          // 允许正常滚动 
+      }, { passive: true }); 
+ 
+      let isVehicleActive = false; 
+ 
+      // 加载保存的数据或使用默认值 
+      let batteryLevel = localStorage.getItem('batteryLevel') || '30'; 
+      let mileage = localStorage.getItem('mileage') || '98'; 
+      let username = localStorage.getItem('username') || 'zwe模拟器'; 
+      let signature = localStorage.getItem('signature') || '你的个性签名'; 
+      let momentCount = localStorage.getItem('momentCount') || '0'; 
+      let followCount = localStorage.getItem('followCount') || '0'; 
+      let fansCount = localStorage.getItem('fansCount') || '0'; 
+      let avatarUrl = localStorage.getItem('avatarUrl') || 'https://i.imgs.ovh/2025/09/09/70iU4m.jpeg'; 
+ 
+      // 初始化显示 
+      function initDisplay() { 
+          document.getElementById('username-text').textContent = username; 
+          document.getElementById('user-signature').textContent = signature; 
+          document.getElementById('moment-count').textContent = momentCount; 
+          document.getElementById('follow-count').textContent = followCount; 
+          document.getElementById('fans-count').textContent = fansCount; 
+          document.getElementById('user-avatar').src = avatarUrl; 
+          document.getElementById('avatar-preview').src = avatarUrl; 
+ 
+          // 更新车辆信息 
+          document.getElementById('fuel-value').textContent = `${batteryLevel}%`; 
+          document.getElementById('mileage-value').textContent = `${mileage}公里`; 
+      } 
+ 
+      // 切换车辆页面 
+      function toggleVehiclePage() { 
+          const vehicleIcon = document.getElementById('vehicle-icon'); 
+          const mineIcon = document.getElementById('mine-icon'); 
+          const bottomNav = document.getElementById('bottom-nav'); 
+          const vehiclePage = document.getElementById('vehicle-page'); 
+ 
+          if (!isVehicleActive) { 
+              vehicleIcon.src = 'https://i.imgs.ovh/2025/09/09/770QCF.jpeg'; 
+              mineIcon.src = 'https://i.imgs.ovh/2025/09/09/770WAm.jpeg'; 
+              bottomNav.classList.add('vehicle-active'); 
+              vehiclePage.style.display = 'block'; 
+              isVehicleActive = true; 
+ 
+              // 初始化轮播图 
+              initCarousel(); 
+          } else { 
+              vehicleIcon.src = 'https://i.imgs.ovh/2025/09/09/7709cU.jpeg'; 
+              mineIcon.src = 'https://i.imgs.ovh/2025/09/09/770MlQ.jpeg'; 
+              bottomNav.classList.remove('vehicle-active'); 
+              vehiclePage.style.display = 'none'; 
+              isVehicleActive = false; 
+          } 
+      } 
+ 
+      // 显示主页面 
+      function showMainPage() { 
+          const vehicleIcon = document.getElementById('vehicle-icon'); 
+          const mineIcon = document.getElementById('mine-icon'); 
+          const bottomNav = document.getElementById('bottom-nav'); 
+          const vehiclePage = document.getElementById('vehicle-page'); 
+ 
+          vehicleIcon.src = 'https://i.imgs.ovh/2025/09/09/7709cU.jpeg'; 
+          mineIcon.src = 'https://i.imgs.ovh/2025/09/09/770MlQ.jpeg'; 
+          bottomNav.classList.remove('vehicle-active'); 
+          vehiclePage.style.display = 'none'; 
+          isVehicleActive = false; 
+      } 
+ 
+      function handleNavClick(type) { 
+          if (type === 'mine') { 
+              showMainPage(); 
+          } 
+      } 
+ 
+      // 显示/隐藏弹窗的通用函数 
+      function showModal(modalId) { 
+          const modal = document.getElementById(modalId); 
+          modal.style.display = 'flex'; 
+          setTimeout(() => { 
+              modal.classList.add('show'); 
+          }, 10); 
+      } 
+ 
+      function hideModal(modalId) { 
+          const modal = document.getElementById(modalId); 
+          modal.classList.remove('show'); 
+          setTimeout(() => { 
+              modal.style.display = 'none'; 
+          }, 300); 
+      } 
+ 
+      // 油量/公里编辑功能 
+      document.getElementById('edit-icon').addEventListener('click', function() { 
+          document.getElementById('battery-input').value = batteryLevel; 
+          document.getElementById('mileage-input').value = mileage; 
+          showModal('edit-modal'); 
+      }); 
+ 
+      document.getElementById('cancel-edit').addEventListener('click', function() { 
+          hideModal('edit-modal'); 
+      }); 
+ 
+      document.getElementById('save-edit').addEventListener('click', function() { 
+          const newBattery = document.getElementById('battery-input').value; 
+          const newMileage = document.getElementById('mileage-input').value; 
+ 
+          if (newBattery && newMileage) { 
+              batteryLevel = newBattery; 
+              mileage = newMileage; 
+ 
+              localStorage.setItem('batteryLevel', batteryLevel); 
+              localStorage.setItem('mileage', mileage); 
+ 
+              // 更新车辆页面显示 
+              document.getElementById('fuel-value').textContent = `${batteryLevel}%`; 
+              document.getElementById('mileage-value').textContent = `${mileage}公里`; 
+ 
+              hideModal('edit-modal'); 
+          } 
+      }); 
+ 
+      // 用户信息编辑功能 
+      document.getElementById('user-edit-icon').addEventListener('click', function() { 
+          document.getElementById('username-input').value = username; 
+          document.getElementById('signature-input').value = signature; 
+          document.getElementById('moment-input').value = momentCount; 
+          document.getElementById('follow-input').value = followCount; 
+          document.getElementById('fans-input').value = fansCount; 
+          showModal('user-edit-modal'); 
+      }); 
+ 
+      document.getElementById('cancel-user-edit').addEventListener('click', function() { 
+          hideModal('user-edit-modal'); 
+      }); 
+ 
+      document.getElementById('save-user-edit').addEventListener('click', function() { 
+          const newUsername = document.getElementById('username-input').value; 
+          const newSignature = document.getElementById('signature-input').value; 
+          const newMoment = document.getElementById('moment-input').value; 
+          const newFollow = document.getElementById('follow-input').value; 
+          const newFans = document.getElementById('fans-input').value; 
+ 
+          if (newUsername && newSignature && newMoment && newFollow && newFans) { 
+              username = newUsername; 
+              signature = newSignature; 
+              momentCount = newMoment; 
+              followCount = newFollow; 
+              fansCount = newFans; 
+ 
+              localStorage.setItem('username', username); 
+              localStorage.setItem('signature', signature); 
+              localStorage.setItem('momentCount', momentCount); 
+              localStorage.setItem('followCount', followCount); 
+              localStorage.setItem('fansCount', fansCount); 
+ 
+              document.getElementById('username-text').textContent = username; 
+              document.getElementById('user-signature').textContent = signature; 
+              document.getElementById('moment-count').textContent = momentCount; 
+              document.getElementById('follow-count').textContent = followCount; 
+              document.getElementById('fans-count').textContent = fansCount; 
+ 
+              hideModal('user-edit-modal'); 
+          } 
+      }); 
+ 
+      // 头像上传功能 
+      document.getElementById('avatar-preview').addEventListener('click', function() { 
+          document.getElementById('avatar-upload-input').click(); 
+      }); 
+ 
+      document.getElementById('avatar-upload-input').addEventListener('change', function(e) { 
+          const file = e.target.files[0]; 
+          if (file) { 
+              const reader = new FileReader(); 
+              reader.onload = function(event) { 
+                  const newAvatarUrl = event.target.result; 
+                  document.getElementById('avatar-preview').src = newAvatarUrl; 
+                  document.getElementById('user-avatar').src = newAvatarUrl; 
+                  localStorage.setItem('avatarUrl', newAvatarUrl); 
+              }; 
+              reader.readAsDataURL(file); 
+          } 
+      }); 
+ 
+      // 图片加载完成检测 
+      function checkImagesLoaded() { 
+          const images = document.querySelectorAll('img'); 
+          let loadedCount = 0; 
+          const totalImages = images.length; 
+ 
+          images.forEach(img => { 
+              if (img.complete) { 
+                  loadedCount++; 
+              } else { 
+                  img.addEventListener('load', () => { 
+                      loadedCount++; 
+                      if (loadedCount === totalImages) { 
+                          document.getElementById('loading-modal').style.display = 'none'; 
+                      } 
+                  }); 
+                  img.addEventListener('error', () => { 
+                      loadedCount++; // 即使加载失败也计数 
+                      if (loadedCount === totalImages) { 
+                          document.getElementById('loading-modal').style.display = 'none'; 
+                      } 
+                  }); 
+              } 
+          }); 
+ 
+          // 如果所有图片都已加载完成 
+          if (loadedCount === totalImages) { 
+              document.getElementById('loading-modal').style.display = 'none'; 
+          } 
+      } 
+ 
+      // 轮播图逻辑 
+      function initCarousel() { 
+          const carousel = document.querySelector('.carousel'); 
+          const dots = document.querySelectorAll('.dot'); 
+          const items = document.querySelectorAll('.carousel-item'); 
+          const container = document.querySelector('.carousel-container'); 
+          let currentIndex = 0; 
+          let startX = 0; 
+          let isDragging = false; 
+          let dragOffset = 0; 
+          let isAnimating = false; 
+          let animationId = null; 
+ 
+          function getItemWidth() { 
+              return items[0].offsetWidth + parseInt(window.getComputedStyle(items[0]).marginLeft) * 2; 
+          } 
+ 
+          function updateCarousel(instant = false) { 
+              if (animationId) { 
+                  cancelAnimationFrame(animationId); 
+                  animationId = null; 
+              } 
+ 
+              isAnimating = true; 
+              const itemWidth = getItemWidth(); 
+              const centerOffset = (window.innerWidth - itemWidth) / 2; 
+ 
+              if (instant) { 
+                  carousel.style.transition = 'none'; 
+              } else { 
+                  carousel.style.transition = 'transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1)'; 
+              } 
+ 
+              carousel.style.transform = `translateX(${centerOffset - currentIndex * itemWidth}px)`; 
+ 
+              // 更新导航点状态 
+              dots.forEach((dot, index) => { 
+                  dot.classList.toggle('active', index === currentIndex); 
+              }); 
+ 
+              if (!instant) { 
+                  animationId = requestAnimationFrame(() => { 
+                      isAnimating = false; 
+                  }); 
+              } else { 
+                  isAnimating = false; 
+              } 
+          } 
+ 
+          function handleSwipe() { 
+              const itemWidth = getItemWidth(); 
+              const threshold = itemWidth * 0.15; 
+ 
+              if (Math.abs(dragOffset) > threshold) { 
+                  if (dragOffset < 0 && currentIndex < items.length - 1) { 
+                      currentIndex++; 
+                  } else if (dragOffset > 0 && currentIndex > 0) { 
+                      currentIndex--; 
+                  } 
+              } 
+ 
+              updateCarousel(); 
+              dragOffset = 0; 
+          } 
+ 
+          dots.forEach(dot => { 
+              dot.addEventListener('click', function() { 
+                  if (isAnimating) return; 
+                  currentIndex = parseInt(this.getAttribute('data-index')); 
+                  updateCarousel(); 
+              }); 
+          }); 
+ 
+          container.addEventListener('touchstart', function(e) { 
+              if (isAnimating) return; 
+              startX = e.touches[0].clientX; 
+              isDragging = true; 
+              carousel.style.transition = 'none'; 
+              e.preventDefault(); 
+          }, { passive: false }); 
+ 
+          container.addEventListener('touchmove', function(e) { 
+              if (!isDragging || isAnimating) return; 
+              const x = e.touches[0].clientX; 
+              dragOffset = x - startX; 
+ 
+              const itemWidth = getItemWidth(); 
+              const centerOffset = (window.innerWidth - itemWidth) / 2; 
+              let offset = centerOffset - currentIndex * itemWidth + dragOffset; 
+ 
+              // 平滑边界效果 
+              if (currentIndex === 0 && dragOffset > 0) { 
+                  offset = centerOffset + dragOffset * 0.3; 
+              } else if (currentIndex === items.length - 1 && dragOffset < 0) { 
+                  offset = centerOffset - currentIndex * itemWidth + dragOffset * 0.3; 
+              } 
+ 
+              carousel.style.transform = `translateX(${offset}px)`; 
+              e.preventDefault(); 
+          }, { passive: false }); 
+ 
+          container.addEventListener('touchend', function(e) { 
+              if (!isDragging || isAnimating) return; 
+              isDragging = false; 
+              handleSwipe(); 
+              e.preventDefault(); 
+          }, { passive: false }); 
+ 
+          container.addEventListener('mousedown', function(e) { 
+              if (isAnimating) return; 
+              startX = e.clientX; 
+              isDragging = true; 
+              carousel.style.transition = 'none'; 
+              e.preventDefault(); 
+          }); 
+ 
+          document.addEventListener('mousemove', function(e) { 
+              if (!isDragging || isAnimating) return; 
+              const x = e.clientX; 
+              dragOffset = x - startX; 
+ 
+              const itemWidth = getItemWidth(); 
+              const centerOffset = (window.innerWidth - itemWidth) / 2; 
+              let offset = centerOffset - currentIndex * itemWidth + dragOffset; 
+ 
+              if (currentIndex === 0 && dragOffset > 0) { 
+                  offset = centerOffset + dragOffset * 0.3; 
+              } else if (currentIndex === items.length - 1 && dragOffset < 0) { 
+                  offset = centerOffset - currentIndex * itemWidth + dragOffset * 0.3; 
+              } 
+ 
+              carousel.style.transform = `translateX(${offset}px)`; 
+              e.preventDefault(); 
+          }); 
+ 
+          document.addEventListener('mouseup', function(e) { 
+              if (!isDragging || isAnimating) return; 
+              isDragging = false; 
+              handleSwipe(); 
+              e.preventDefault(); 
+          }); 
+ 
+          // 初始化 
+          updateCarousel(true); 
+ 
+          window.addEventListener('resize', function() { 
+              updateCarousel(true); 
+          }); 
+      } 
+ 
+      // 更新时间函数 
+      function updateTime() { 
+          const now = new Date(); 
+          const year = now.getFullYear(); 
+          const month = String(now.getMonth() + 1).padStart(2, '0'); 
+          const day = String(now.getDate()).padStart(2, '0'); 
+          const hours = String(now.getHours()).padStart(2, '0'); 
+          const minutes = String(now.getMinutes()).padStart(2, '0'); 
+          document.getElementById('current-time').textContent = `同步于: ${year}/${month}/${day} ${hours}:${minutes}`; 
+      } 
+ 
+      // 初始化页面 
+      document.addEventListener('DOMContentLoaded', function() { 
+          initDisplay(); 
+ 
+          // 初始化时间并设置定时器 
+          updateTime(); 
+          setInterval(updateTime, 60000); 
+ 
+          // 真实检测图片加载情况 
+          checkImagesLoaded(); 
+      }); 
+  </script> 
+ 
+ 
+</body></html>
